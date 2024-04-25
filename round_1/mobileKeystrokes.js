@@ -3,11 +3,13 @@ const mobileDisplayKeystrokes = (word) => {
 
   const ASCII_CODE_OF_O = 111;
   const ASCII_CODE_OF_V = 118;
+  const ASCII_CODE_OF_HASHTAG = 35;
+  const ASCII_CODE_OF_9 = 57;
 
   for (let i = 0; i < word.length; i++) {
     const asciiCode = word.charCodeAt(i);
 
-    if (asciiCode >= 35 && asciiCode <= 57) {
+    if (asciiCode >= ASCII_CODE_OF_HASHTAG && ASCII_CODE_OF_9 <= 57) { 
       keystrokes++;
     } else if (asciiCode <= ASCII_CODE_OF_O) {
       let asciiFactor = asciiCode % 3;
